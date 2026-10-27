@@ -135,7 +135,8 @@ exit 0
 ---
 
 <div align="center" style="margin-top: 40px;">
-✉️ **Suivez-nous** sur X/Twitter : <a href="https://twitter.com/academie_dgk" target="_blank" rel="noopener noreferrer">@academie_dgk</a>
+✉️ **Suivez-nous** sur linkedin : 
+https://ca.linkedin.com/in/aissa-mohammedi-2308743b2?trk=public_post_feed-actor-name
 
 ❓ **Besoin d'aide ?** Posez votre question dans `#academie-dgk` sur le Discord communautaire.
 
