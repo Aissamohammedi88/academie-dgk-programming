@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Académie DGK — Cours de Programmation (50 Modules)</title>
+<style>
+@page { size: A4; margin: 2cm; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.cover {
+    text-align: center;
+    padding: 80px 20px;
+    page-break-after: always;
+    border-bottom: 4px solid #0d1117;
+}
+.cover h1 {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    background: linear-gradient(135deg, #0d1117, #00d4ff, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+}
+.cover .sub {
+    font-size: 20px;
+    color: #666;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.cover .meta {
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 12px;
+    color: #999;
+    margin-top: 60px;
+    line-height: 2;
+}
+.cover .meta strong { color: #333; }
+h2.section {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 60px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0d1117;
+    page-break-after: avoid;
+}
+h2.section span {
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 14px;
+    color: #999;
+    margin-left: 12px;
+}
+.module {
+    margin-bottom: 32px;
+    page-break-inside: avoid;
+    border-left: 4px solid #00d4ff;
+    padding-left: 20px;
+}
+.module-num {
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 12px;
+    color: #00d4ff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+.module h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0d1117;
+    margin-bottom: 12px;
+}
+.module p {
+    color: #444;
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+pre {
+    background: #0d1117;
+    color: #e6edf3;
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 14px 0;
+    border-left: 3px solid #a855f7;
+}
+code {
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 13px;
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #c7254e;
+}
+pre code { background: none; color: inherit; padding: 0; }
+.toc {
+    margin: 40px 0;
+    padding: 20px 24px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    page-break-after: always;
+}
+.toc h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: #0d1117;
+}
+.toc ol { padding-left: 24px; }
+.toc li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+    font-family: 'SF Mono', Menlo, monospace;
+}
+.toc li .cat {
+    display: inline-block;
+    padding: 1px 8px;
+    background: #00d4ff;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 10px;
+    margin-left: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 2px solid #0d1117;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    font-family: 'SF Mono', Menlo, monospace;
+}
+@media print {
+    body { padding: 0; }
+    .cover { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+    .module { page-break-inside: avoid; }
+    pre { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- COUVERTURE -->
+<div class="cover">
+    <h1>ACADÉMIE DGK</h1>
+    <div class="sub">Cours Complet de Programmation</div>
+    <p style="font-size:18px;color:#444;max-width:500px;margin:0 auto;">
+        50 modules progressifs pour maîtriser les fondations,
+        la programmation orientée objet, les algorithmes, l'intelligence
+        artificielle et les systèmes.
+    </p>
+    <div class="meta">
+        <strong>Auteur</strong> : Aissa Mohammedi (DGK)<br>
+        <strong>Version</strong> : 1.0.0<br>
+        <strong>Date</strong> : 25/10/2026<br>
+        <strong>Licence</strong> : NEXUS-OPEN-3.0<br>
+        <strong>Modules</strong> : 50
+    </div>
+</div>
+
+<!-- TABLE DES MATIÈRES -->
+<div class="toc">
+    <h2>Table des matières</h2>
+    <ol>
+        <li>Introduction à la programmation <span class="cat">Fondations</span></li>
+        <li>Variables et types de données <span class="cat">Fondations</span></li>
+        <li>Opérateurs arithmétiques <span class="cat">Fondations</span></li>
+        <li>Structures conditionnelles <span class="cat">Fondations</span></li>
+        <li>Boucles for et while <span class="cat">Fondations</span></li>
+        <li>Les fonctions <span class="cat">Fondations</span></li>
+        <li>Listes et itération <span class="cat">Fondations</span></li>
+        <li>Dictionnaires <span class="cat">Fondations</span></li>
+        <li>Tuples et ensembles <span class="cat">Fondations</span></li>
+        <li>Gestion des erreurs <span class="cat">Fondations</span></li>
+        <li>Classes et objets <span class="cat">POO</span></li>
+        <li>Héritage <span class="cat">POO</span></li>
+        <li>Encapsulation <span class="cat">POO</span></li>
+        <li>Méthodes magiques <span class="cat">POO</span></li>
+        <li>Composition <span class="cat">POO</span></li>
+        <li>Interfaces et classes abstraites <span class="cat">POO</span></li>
+        <li>Design patterns : Singleton <span class="cat">POO</span></li>
+        <li>Design patterns : Factory <span class="cat">POO</span></li>
+        <li>Design patterns : Observer <span class="cat">POO</span></li>
+        <li>Design patterns : Strategy <span class="cat">POO</span></li>
+        <li>Complexité algorithmique <span class="cat">Algorithmes</span></li>
+        <li>Recherche binaire <span class="cat">Algorithmes</span></li>
+        <li>Algorithmes de tri <span class="cat">Algorithmes</span></li>
+        <li>Récursivité <span class="cat">Algorithmes</span></li>
+        <li>Structures de données : Pile <span class="cat">Algorithmes</span></li>
+        <li>Structures de données : File <span class="cat">Algorithmes</span></li>
+        <li>Structures de données : Arbres <span class="cat">Algorithmes</span></li>
+        <li>Graphes : BFS et DFS <span class="cat">Algorithmes</span></li>
+        <li>Programmation dynamique <span class="cat">Algorithmes</span></li>
+        <li>Algorithme glouton <span class="cat">Algorithmes</span></li>
+        <li>Mathématiques : Fonctions linéaires <span class="cat">Mathématiques</span></li>
+        <li>Dérivées et optimisation <span class="cat">Mathématiques</span></li>
+        <li>Matrices et algèbre linéaire <span class="cat">Mathématiques</span></li>
+        <li>Probabilités <span class="cat">Mathématiques</span></li>
+        <li>Statistiques descriptives <span class="cat">Mathématiques</span></li>
+        <li>Régression linéaire <span class="cat">IA</span></li>
+        <li>Réseaux de neurones <span class="cat">IA</span></li>
+        <li>Descente de gradient <span class="cat">IA</span></li>
+        <li>NLP : Tokenisation <span class="cat">IA</span></li>
+        <li>Embeddings <span class="cat">IA</span></li>
+        <li>Fichiers et I/O <span class="cat">Système</span></li>
+        <li>SQLite en Python <span class="cat">Système</span></li>
+        <li>Threading <span class="cat">Système</span></li>
+        <li>Multiprocessing <span class="cat">Système</span></li>
+        <li>Réseau : Sockets <span class="cat">Système</span></li>
+        <li>HTTP avec urllib <span class="cat">Système</span></li>
+        <li>JSON <span class="cat">Système</span></li>
+        <li>Décorateurs <span class="cat">Système</span></li>
+        <li>Générateurs <span class="cat">Système</span></li>
+        <li>Conclusion et bonnes pratiques <span class="cat">Synthèse</span></li>
+    </ol>
+</div>
+
+<!-- CONTENU DES MODULES -->
+<h2 class="section">Fondations<span>Section</span></h2>
+
+<div class="module">
+    <div class="module-num">MODULE 01 / 50</div>
+    <h3>Introduction à la programmation</h3>
+    <p>Un programme est une suite d'instructions exécutées par la machine. Le premier réflexe : afficher du texte pour vérifier que tout fonctionne.</p>
+    <pre><code>print('Hello, World!')</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 02 / 50</div>
+    <h3>Variables et types de données</h3>
+    <p>Une variable est une boîte mémoire nommée. Les types définissent ce qu'on peut y stocker : texte (str), entier (int), décimal (float), booléen (bool).</p>
+    <pre><code>nom = 'DGK'
+age = 25
+pi = 3.14159
+est_actif = True</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 03 / 50</div>
+    <h3>Opérateurs arithmétiques</h3>
+    <p>L'addition, la soustraction, la multiplication. Mais aussi la division entière (//), le modulo (%), et la puissance (**).</p>
+    <pre><code>a, b = 10, 3
+print(a + b) # 13
+print(a // b) # 3
+print(a % b) # 1
+print(a ** 2) # 100</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 04 / 50</div>
+    <h3>Structures conditionnelles</h3>
+    <p>Le if/elif/else permet de prendre des décisions. Le code s'exécute selon les conditions évaluées de haut en bas.</p>
+    <pre><code>temperature = 25
+if temperature > 30:
+    print('Chaud')
+elif temperature > 15:
+    print('Agréable')
+else:
+    print('Froid')</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 05 / 50</div>
+    <h3>Boucles for et while</h3>
+    <p>Une boucle répète une action. La for itère sur une séquence. La while continue tant qu'une condition est vraie.</p>
+    <pre><code>for i in range(3):
+    print(f'Itération {i}')
+
+compteur = 0
+while compteur < 3:
+    print('Boucle while')
+    compteur += 1</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 06 / 50</div>
+    <h3>Les fonctions</h3>
+    <p>Une fonction encapsule un bloc de code réutilisable. Elle prend des paramètres et retourne une valeur.</p>
+    <pre><code>def saluer(nom, titre='M.'):
+    return f'Bonjour {titre} {nom}'
+
+print(saluer('DGK'))</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 07 / 50</div>
+    <h3>Listes et itération</h3>
+    <p>Une liste est une collection ordonnée et modifiable. On l'itère avec for, on ajoute avec append(), on indexe avec [].</p>
+    <pre><code>langages = ['Python', 'Rust', 'Go']
+for lang in langages:
+    print(lang)
+
+langages.append('C++')</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 08 / 50</div>
+    <h3>Dictionnaires</h3>
+    <p>Un dictionnaire associe des clés à des valeurs. Accès en O(1). La méthode get() évite les erreurs sur clés absentes.</p>
+    <pre><code>profil = {
+    'nom': 'DGK',
+    'role': 'Architecte',
+    'actif': True
+}
+print(profil['nom'])
+print(profil.get('age', 'Inconnu'))</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 09 / 50</div>
+    <h3>Tuples et ensembles</h3>
+    <p>Un tuple est une liste immuable (bon pour les données fixes). Un ensemble stocke des éléments uniques sans ordre.</p>
+    <pre><code>coordonnees = (48.8566, 2.3522) # immuable
+technos = {'Python', 'Rust', 'Go'} # unique
+print('Python' in technos)</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 10 / 50</div>
+    <h3>Gestion des erreurs</h3>
+    <p>try/except capture les erreurs pour éviter que le programme plante. finally s'exécute toujours, qu'il y ait erreur ou non.</p>
+    <pre><code>try:
+    resultat = 10 / 0
+except ZeroDivisionError:
+    print('Division par zéro !')
+finally:
+    print('Nettoyage')</code></pre>
+</div>
+
+<h2 class="section">POO<span>Section</span></h2>
+
+<div class="module">
+    <div class="module-num">MODULE 11 / 50</div>
+    <h3>Classes et objets</h3>
+    <p>Une classe est un moule. Un objet est une instance. __init__ est le constructeur. self référence l'objet lui-même.</p>
+    <pre><code>class Voiture:
+    def __init__(self, marque):
+        self.marque = marque
+    
+    def klaxonner(self):
+        return 'Bip !'
+
+v = Voiture('Tesla')
+print(v.klaxonner())</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 12 / 50</div>
+    <h3>Héritage</h3>
+    <p>L'héritage permet de créer une classe à partir d'une autre. La méthode peut être redéfinie (overridden) dans la sous-classe.</p>
+    <pre><code>class Animal:
+    def parler(self):
+        return '...'
+
+class Chien(Animal):
+    def parler(self):
+        return 'Woof !'
+
+print(Chien().parler())</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 13 / 50</div>
+    <h3>Encapsulation</h3>
+    <p>L'encapsulation protège les données internes. _ préfixe une variable protégée, __ une variable privée. @property crée un getter propre.</p>
+    <pre><code>class Compte:
+    def __init__(self, solde):
+        self._solde = solde # protégé
+    
+    @property
+    def solde(self):
+        return self._solde</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 14 / 50</div>
+    <h3>Méthodes magiques</h3>
+    <p>Les dunder methods (__add__, __repr__, __len__) définissent le comportement de l'objet face aux opérateurs et fonctions Python.</p>
+    <pre><code>class Point:
+    def __init__(self, x, y):
+        self.x, self.y = x, y
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+    def __repr__(self):
+        return f'Point({self.x}, {self.y})'</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 15 / 50</div>
+    <h3>Composition</h3>
+    <p>La composition assemble des objets. Préférée à l'héritage quand la relation est 'a un' plutôt que 'est un'.</p>
+    <pre><code>class Moteur:
+    def demarrer(self):
+        return 'Vroom'
+
+class Voiture:
+    def __init__(self):
+        self.moteur = Moteur()
+    def demarrer(self):
+        return self.moteur.demarrer()</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 16 / 50</div>
+    <h3>Interfaces et classes abstraites</h3>
+    <p>Une classe abstraite définit un contrat. On ne peut pas l'instancier. Les sous-classes doivent implémenter les méthodes abstraites.</p>
+    <pre><code>from abc import ABC, abstractmethod
+
+class Forme(ABC):
+    @abstractmethod
+    def aire(self): ...
+
+class Carre(Forme):
+    def __init__(self, c): self.c = c
+    def aire(self): return self.c ** 2</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 17 / 50</div>
+    <h3>Design patterns : Singleton</h3>
+    <p>Le Singleton garantit qu'une classe n'a qu'une instance. Utile pour la configuration, la connexion DB, les logs.</p>
+    <pre><code>class Config:
+    _instance = None
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 18 / 50</div>
+    <h3>Design patterns : Factory</h3>
+    <p>La Factory centralise la création d'objets. Le code client ne dépend pas des classes concrètes.</p>
+    <pre><code>class FormeFactory:
+    @staticmethod
+    def creer(type_forme):
+        if type_forme == 'cercle':
+            return Cercle()
+        return Carre()</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 19 / 50</div>
+    <h3>Design patterns : Observer</h3>
+    <p>L'Observer notifie plusieurs objets quand l'état change. Utilisé pour les événements, les UI, les flux de données.</p>
+    <pre><code>class Sujet:
+    def __init__(self):
+        self._obs = []
+    def attacher(self, o):
+        self._obs.append(o)
+    def notifier(self):
+        for o in self._obs:
+            o.update()</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 20 / 50</div>
+    <h3>Design patterns : Strategy</h3>
+    <p>La Strategy permet d'échanger des algorithmes à l'exécution. Le client choisit la stratégie sans connaître l'implémentation.</p>
+    <pre><code>class Trieur:
+    def __init__(self, strat):
+        self.strat = strat
+    def trier(self, data):
+        return self.strat(data)</code></pre>
+</div>
+
+<h2 class="section">Algorithmes<span>Section</span></h2>
+
+<div class="module">
+    <div class="module-num">MODULE 21 / 50</div>
+    <h3>Complexité algorithmique</h3>
+    <p>La notation Big O décrit comment le temps d'exécution évolue avec la taille des données. Objectif : rester sous O(n log n).</p>
+    <pre><code># O(1) - constant
+# O(log n) - logarithmique
+# O(n) - linéaire
+# O(n log n) - tri efficace
+# O(n²) - quadratique
+# O(2^n) - exponentiel</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 22 / 50</div>
+    <h3>Recherche binaire</h3>
+    <p>Sur un tableau trié, on divise par deux à chaque étape. Complexité O(log n). Fondamental.</p>
+    <pre><code>def recherche_binaire(arr, cible):
+    g, d = 0, len(arr) - 1
+    while g <= d:
+        m = (g + d) // 2
+        if arr[m] == cible: return m
+        if arr[m] < cible: g = m + 1
+        else: d = m - 1
+    return -1</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 23 / 50</div>
+    <h3>Algorithmes de tri</h3>
+    <p>Python utilise Timsort, un tri hybride O(n log n) en moyenne, O(n) si déjà trié.</p>
+    <pre><code># sorted() utilise Timsort
+data = [3, 1, 4, 1, 5, 9, 2, 6]
+print(sorted(data))
+# O(n log n)</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 24 / 50</div>
+    <h3>Récursivité</h3>
+    <p>Une fonction récursive s'appelle elle-même. Toujours besoin d'un cas de base pour éviter la récursion infinie.</p>
+    <pre><code>def factorielle(n):
+    if n <= 1: return 1
+    return n * factorielle(n - 1)</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 25 / 50</div>
+    <h3>Structures de données : Pile</h3>
+    <p>Une pile fonctionne en LIFO (Last In, First Out). Utile pour l'undo, les appels récursifs, le parsing.</p>
+    <pre><code>pile = []
+pile.append(1)
+pile.append(2)
+print(pile.pop()) # 2 (LIFO)</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 26 / 50</div>
+    <h3>Structures de données : File</h3>
+    <p>Une file fonctionne en FIFO (First In, First Out). Utilise deque pour O(1) sur les opérations.</p>
+    <pre><code>from collections import deque
+file = deque()
+file.append(1)
+file.append(2)
+print(file.popleft()) # 1 (FIFO)</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 27 / 50</div>
+    <h3>Structures de données : Arbres</h3>
+    <p>Un arbre binaire a deux enfants par nœud. Un arbre binaire de recherche (BST) garde les valeurs ordonnées.</p>
+    <pre><code>class Noeud:
+    def __init__(self, val):
+        self.val = val
+        self.gauche = None
+        self.droite = None</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 28 / 50</div>
+    <h3>Graphes : BFS et DFS</h3>
+    <p>BFS explore par niveau (courte distance). DFS explore en profondeur (composantes connexes).</p>
+    <pre><code>from collections import deque
+
+def bfs(graphe, start):
+    visite, queue = {start}, deque([start])
+    while queue:
+        n = queue.popleft()
+        for v in graphe[n]:
+            if v not in visite:
+                visite.add(v)
+                queue.append(v)
+    return visite</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 29 / 50</div>
+    <h3>Programmation dynamique</h3>
+    <p>La programmation dynamique résout les sous-problèmes une seule fois et réutilise les résultats.</p>
+    <pre><code>def fib(n):
+    memo = {0: 0, 1: 1}
+    for i in range(2, n + 1):
+        memo[i] = memo[i-1] + memo[i-2]
+    return memo[n]</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 30 / 50</div>
+    <h3>Algorithme glouton</h3>
+    <p>Le glouton choisit la meilleure option locale à chaque étape. Rapide, mais pas toujours optimal.</p>
+    <pre><code>def rendu_monnaie(somme, pieces):
+    res = []
+    for p in sorted(pieces, reverse=True):
+        while somme >= p:
+            res.append(p)
+            somme -= p
+    return res</code></pre>
+</div>
+
+<h2 class="section">Mathématiques<span>Section</span></h2>
+
+<div class="module">
+    <div class="module-num">MODULE 31 / 50</div>
+    <h3>Mathématiques : Fonctions linéaires</h3>
+    <p>Une fonction linéaire f(x) = ax + b. La pente a détermine le taux de variation. Fondamental en ML.</p>
+    <pre><code>def f(x):
+    return 2 * x + 3
+
+print(f(4)) # 11</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 32 / 50</div>
+    <h3>Dérivées et optimisation</h3>
+    <p>La dérivée mesure le taux de variation instantané. En ML, on l'utilise pour la descente de gradient.</p>
+    <pre><code>def derivee(f, x, h=1e-6):
+    return (f(x + h) - f(x - h)) / (2 * h)</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 33 / 50</div>
+    <h3>Matrices et algèbre linéaire</h3>
+    <p>Les matrices représentent des transformations linéaires. Produit matriciel = composition de transformations.</p>
+    <pre><code>import numpy as np
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+print(A @ B)</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 34 / 50</div>
+    <h3>Probabilités</h3>
+    <p>La probabilité d'un événement = cas favorables / cas possibles. Base du raisonnement statistique.</p>
+    <pre><code>def proba(events, total):
+    return len(events) / total
+
+proba_as = 4 / 52</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 35 / 50</div>
+    <h3>Statistiques descriptives</h3>
+    <p>La moyenne, la médiane et l'écart-type résument une distribution. Fondamental pour analyser des données.</p>
+    <pre><code>import statistics
+
+data = [1, 2, 3, 4, 5]
+print(statistics.mean(data))
+print(statistics.median(data))
+print(statistics.stdev(data))</code></pre>
+</div>
+
+<h2 class="section">IA<span>Section</span></h2>
+
+<div class="module">
+    <div class="module-num">MODULE 36 / 50</div>
+    <h3>Régression linéaire</h3>
+    <p>Trouve la droite qui passe au plus près d'un ensemble de points. Base de la prédiction simple.</p>
+    <pre><code>def regression(xs, ys):
+    n = len(xs)
+    mx = sum(xs) / n
+    my = sum(ys) / n
+    a = sum((x-mx)*(y-my) for x, y in zip(xs, ys)) / sum((x-mx)**2 for x in xs)
+    b = my - a * mx
+    return a, b</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 37 / 50</div>
+    <h3>Réseaux de neurones</h3>
+    <p>Un neurone calcule une somme pondérée puis applique une non-linéarité (ReLU). Empilés, ils forment un réseau.</p>
+    <pre><code>def neurone(entrees, poids, biais):
+    z = sum(e * p for e, p in zip(entrees, poids)) + biais
+    return max(0, z) # ReLU</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 38 / 50</div>
+    <h3>Descente de gradient</h3>
+    <p>On ajuste les paramètres dans la direction opposée au gradient. La loss diminue à chaque étape.</p>
+    <pre><code>def gradient_descent(x, y, lr=0.01, epochs=1000):
+    a, b = 0, 0
+    for _ in range(epochs):
+        da = sum((a * xi + b - yi) * xi for xi, yi in zip(x, y))
+        db = sum((a * xi + b - yi) for xi, yi in zip(x, y))
+        a -= lr * da
+        b -= lr * db
+    return a, b</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 39 / 50</div>
+    <h3>NLP : Tokenisation</h3>
+    <p>La tokenisation découpe un texte en unités (mots, sous-mots). Première étape de tout traitement NLP.</p>
+    <pre><code>import re
+
+texte = 'Bonjour, monde !'
+tokens = re.findall(r'\w+', texte.lower())
+print(tokens) # ['bonjour', 'monde']</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 40 / 50</div>
+    <h3>Embeddings</h3>
+    <p>Un embedding transforme un mot en vecteur. La similarité cosinus mesure l'angle entre deux vecteurs.</p>
+    <pre><code>def cosine_sim(a, b):
+    dot = sum(x * y for x, y in zip(a, b))
+    na = sum(x*x for x in a) ** 0.5
+    nb = sum(x*x for x in b) ** 0.5
+    return dot / (na * nb)</code></pre>
+</div>
+
+<h2 class="section">Système<span>Section</span></h2>
+
+<div class="module">
+    <div class="module-num">MODULE 41 / 50</div>
+    <h3>Fichiers et I/O</h3>
+    <p>with gère l'ouverture et la fermeture automatiquement. Modes : r (lecture), w (écriture), a (ajout).</p>
+    <pre><code>with open('data.txt', 'w') as f:
+    f.write('Hello')
+with open('data.txt', 'r') as f:
+    print(f.read())</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 42 / 50</div>
+    <h3>SQLite en Python</h3>
+    <p>sqlite3 est dans la stdlib. Base locale, parfaite pour des applications embarquées.</p>
+    <pre><code>import sqlite3
+
+conn = sqlite3.connect('db.sqlite')
+c = conn.cursor()
+c.execute('CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, nom TEXT)')
+c.execute('INSERT INTO user (nom) VALUES (?)', ('DGK',))
+conn.commit()</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 43 / 50</div>
+    <h3>Threading</h3>
+    <p>Les threads exécutent plusieurs tâches en parallèle. Le GIL limite le vrai parallélisme, mais reste utile pour l'I/O.</p>
+    <pre><code>import threading
+
+def tache(n):
+    print(f'Thread {n}')
+
+threads = [threading.Thread(target=tache, args=(i,)) for i in range(3)]
+for t in threads: t.start()
+for t in threads: t.join()</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 44 / 50</div>
+    <h3>Multiprocessing</h3>
+    <p>Multiprocessing contourne le GIL en utilisant plusieurs processus. Idéal pour le CPU intensif.</p>
+    <pre><code>from multiprocessing import Pool
+
+def carre(x): return x * x
+
+with Pool(4) as p:
+    print(p.map(carre, range(10)))</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 45 / 50</div>
+    <h3>Réseau : Sockets</h3>
+    <p>Un socket est un point de communication réseau. TCP (STREAM) garantit l'ordre. UDP (DGRAM) est plus rapide.</p>
+    <pre><code>import socket
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(('localhost', 8080))
+s.listen(1)
+conn, addr = s.accept()
+conn.send(b'Hello')
+conn.close()</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 46 / 50</div>
+    <h3>HTTP avec urllib</h3>
+    <p>urllib est dans la stdlib. Pour des requêtes plus avancées, utilise requests (externe).</p>
+    <pre><code>import urllib.request
+
+with urllib.request.urlopen('https://example.com') as r:
+    print(r.status)
+    print(r.read()[:100])</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 47 / 50</div>
+    <h3>JSON</h3>
+    <p>JSON est le format d'échange standard. dumps() sérialise, loads() désérialise.</p>
+    <pre><code>import json
+
+data = {'nom': 'DGK', 'age': 25}
+s = json.dumps(data)
+print(s)
+obj = json.loads(s)
+print(obj['nom'])</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 48 / 50</div>
+    <h3>Décorateurs</h3>
+    <p>Un décorateur ajoute une fonctionnalité à une fonction sans la modifier. Puissant pour le logging, la sécurité, les caches.</p>
+    <pre><code>import time
+
+def chrono(f):
+    def wrapper(*args, **kwargs):
+        t0 = time.time()
+        r = f(*args, **kwargs)
+        print(f'{time.time() - t0:.2f}s')
+        return r
+    return wrapper
+
+@chrono
+def travail(): time.sleep(1)</code></pre>
+</div>
+
+<div class="module">
+    <div class="module-num">MODULE 49 / 50</div>
+    <h3>Générateurs</h3>
+    <p>Un générateur produit des valeurs à la demande. Utilise yield au lieu de return. Économe en mémoire.</p>
+    <pre><code>def compter(n):
+    i = 0
+    while i < n:
+        yield i
+        i += 1
+
+for x in compter(5):
+    print(x)</code></pre>
+</div>
+
+<h2 class="section">Synthèse<span>Section</span></h2>
+
+<div class="module">
+    <div class="module-num">MODULE 50 / 50</div>
+    <h3>Conclusion et bonnes pratiques</h3>
+    <p>La programmation est un art qui se pratique. La curiosité et la rigueur font 90 % du travail. Le reste, c'est de l'expérience.</p>
+    <pre><code># 1. Lis le code des autres
+# 2. Écris des tests
+# 3. Utilise des noms clairs
+# 4. Commente le POURQUOI, pas le COMMENT
+# 5. Refactorise souvent</code></pre>
+</div>
+
+<div class="footer">
+    <strong>ACADÉMIE DGK</strong> · Aissa Mohammedi (DGK)<br>
+    1.0.0 · NEXUS-OPEN-3.0 · 25/10/2026<br>
+    <br>
+    « Le code est un art. La rigueur est la discipline. La curiosité est le moteur. »
+</div>
+
+</body>
+</html>
